@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Чайный дом · китайский чай с доставкой по Алматы</title>
+<meta name="description" content="Китайский чай с доставкой по Алматы: пуэры, улуны, белый и зелёный чай, смеси и подарочные наборы. Около 50 позиций, помощь с выбором, заказ в один клик через мессенджер.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Чайный дом">
+<meta property="og:title" content="Китайский чай с доставкой по Алматы">
+<meta property="og:description" content="Пуэры, улуны, белый и зелёный чай, смеси и подарочные наборы. Поможем выбрать под вкус, заказ в один клик через мессенджер.">
+<meta property="og:url" content="{{адрес сайта}}">
+<meta property="og:image" content="{{адрес сайта}}/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width: 860px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 861px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23b23a2f%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27%23f8f1ed%27 font-family=%27serif%27%3E%E8%8C%B6%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"Чайный дом","description":"Китайский чай с доставкой по Алматы: пуэры, улуны, белый и зелёный чай, смеси и подарочные наборы. Заказ через мессенджер.","url":"{{адрес сайта}}","image":"{{адрес сайта}}/assets/og.jpg","telephone":"{{телефон}}","openingHours":"{{часы}}","areaServed":"Алматы","address":{"@type":"PostalAddress","addressLocality":"Алматы","addressCountry":"KZ"},"priceRange":"{{цена}} ₸"}
+</script>
+<style>
+  /* ---- тема: шесть цветов, два шрифта (палитра А «рисовая бумага + лес», светлая; по ТЗ заказчика) ---- */
+  .v-page {
+    --v-canvas: #f8f1ed; --v-surface: #fffaf8;
+    --v-ink: #1d2a22; --v-ink-soft: #5a675f;          /* 5,3:1 на холсте */
+    --v-accent: #2f6b4d; --v-accent-ink: #f8f3ef;     /* 5,6:1 на холсте, 5,7:1 текст на кнопке */
+    --v-font-display: "Tenor Sans", "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+    --v-font-text: "Onest", "Segoe UI", system-ui, sans-serif;
+    --v-shadow-color: 74 44 40;
+    /* светлый холст: тени легче, кромка карточек световая, а не тёмная */
+    --v-e1: 0 1px 2px rgb(var(--v-shadow-color) / .08), 0 8px 22px rgb(var(--v-shadow-color) / .10);
+    --v-e2: 0 2px 6px rgb(var(--v-shadow-color) / .10), 0 22px 54px rgb(var(--v-shadow-color) / .16);
+    --v-edge: inset 0 1px 0 rgb(255 255 255 / .7);
+    --v-radius: 12px;
+    --v-section: clamp(3.5rem, 8vw, 7rem);
+    --v-display-weight: 400;
+    --v-track-tight: -0.008em;
+    --v-track-normal: 0;
+    --seal: #b23a2f; /* деликатный китайский красный: только печать с иероглифом */
+  }
+  html, body { background: #f8f1ed; }
+  .v-page .v-display { font-weight: 400; }
+  .v-page .v-display--xl { line-height: 1.02; }
+  .v-page .v-lede { font-weight: 400; line-height: 1.45; }
+  .v-page .v-label { font-weight: 500; }
+  .v-page .v-btn { font-size: var(--v-t-base); font-weight: 600; }
+  .v-page [id] { scroll-margin-top: 5rem; }
+
+  /* ---- печать с иероглифом 茶: единственная «китайская» деталь, дозированно ---- */
+  .seal { display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: .4rem; background: var(--seal); flex: none; }
+  .seal::after { content: "茶"; font-family: "Tenor Sans", serif; font-size: 1.25rem; line-height: 1; color: #f8f1ed; transform: translateY(-.04em); }
+  .seal--sm { width: 1.55rem; height: 1.55rem; border-radius: .3rem; }
+  .seal--sm::after { font-size: .95rem; }
+
+  /* ---- шапка: прозрачная на первом экране, плотная после ------------------- */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between;
+    padding: var(--v-3) var(--v-gutter); gap: var(--v-4);
+    background: linear-gradient(to bottom, rgb(248 241 237 / .85), rgb(248 241 237 / 0));
+    transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(248 241 237 / .88); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
+  .bar__mark { font-family: var(--v-font-display); font-size: var(--v-t-lg); letter-spacing: .02em; text-decoration: none;
+    display: inline-flex; align-items: center; gap: .5em; min-height: 44px; white-space: nowrap; }
+  .bar__nav { display: flex; align-items: center; gap: var(--v-4); }
+  .bar__nav a { text-decoration: none; color: var(--v-ink); font-size: var(--v-t-sm); font-weight: 500; display: inline-flex; align-items: center; min-height: 44px; }
+  .bar__nav a:hover { color: var(--v-accent); }
+  .bar__right { display: flex; align-items: center; gap: var(--v-4); }
+  .bar__tel { text-decoration: none; font-weight: 500; font-size: var(--v-t-sm); color: var(--v-ink); display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--v-2); }
+  @media (max-width: 1100px) { .bar__nav { display: none; } }
+  @media (max-width: 700px) {
+    .bar__tel { display: none; }
+    .bar .v-btn { padding: 0 1em; min-height: 44px; font-size: .9rem; }
+    .bar__right { gap: var(--v-2); }
+    .bar__mark { font-size: 1.1rem; }
+  }
+  @media (max-width: 860px) { .bar.is-scrolled { background: rgb(248 241 237 / .94); } }
+
+  /* ---- hero, вариант Б: шторка «чайный лист → чайная сцена» ------------------ */
+  /* нижний слой: крупный план пуэра; поверх по reveal поднимается полный кадр hero */
+  .hero__base img { position: absolute; max-width: none; width: 100%; height: 100%; left: 0; top: 0; object-fit: cover; object-position: 50% 78%; }
+  .hero__reveal { position: absolute; inset: 0; margin: 0; }
+  .hero__reveal img { width: 100%; height: 100%; object-fit: cover; object-position: 0% 50%; display: block; }
+  /* светлый скрим цвета холста под текст: угол на компьютере, полоса на телефоне */
+  .hero__scrim { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: radial-gradient(120% 95% at 0% 100%, rgb(248 241 237 / .92) 0%, rgb(248 241 237 / .6) 38%, transparent 70%); }
+  .hero__floor { position: absolute; inset: auto 0 0 0; height: 26%; z-index: 2; pointer-events: none;
+    background: linear-gradient(to top, var(--v-canvas) 0%, rgb(248 241 237 / .5) 45%, transparent 100%); }
+  .hero__copy { bottom: clamp(5rem, 14vh, 9rem); max-width: min(46rem, 86vw); }
+  .hero__label { display: flex; align-items: center; gap: .7em; margin-bottom: var(--v-4); color: var(--v-accent); }
+  .hero__copy .v-display { font-size: clamp(2.2rem, 1rem + 2.6vw, 3.5rem); max-width: 21ch; }
+  .hero__copy .v-lede { margin-top: var(--v-5); color: var(--v-ink); max-width: 38ch; }
+  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-5); margin-top: var(--v-6); }
+  .hero__ghost { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 1.3em; border-radius: 999px;
+    border: 1px solid var(--v-hair-strong); background: rgb(255 250 248 / .55); color: var(--v-ink); text-decoration: none;
+    font-size: var(--v-t-base); font-weight: 600; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  .hero__ghost:hover { border-color: var(--v-accent); color: var(--v-accent); }
+  @media (max-height: 760px) and (min-width: 861px) { .hero__copy .v-display { font-size: var(--v-t-2xl); } .hero__copy { bottom: clamp(3.5rem, 10vh, 6rem); } }
+  @media (max-width: 860px) {
+    .hero__base img { object-position: 50% 85%; }
+    .hero__reveal img { object-position: 50% 62%; }
+    .hero__scrim { background: linear-gradient(to bottom, rgb(248 241 237 / .94) 0%, rgb(248 241 237 / .8) 44%, transparent 66%); }
+    .hero__floor { height: 14%; }
+    .hero__copy { top: clamp(5.5rem, 11vh, 7rem); bottom: auto; max-width: none; }
+    .hero__copy .v-display { font-size: var(--v-t-2xl); max-width: none; }
+    .hero__copy .v-lede { font-size: var(--v-t-base); margin-top: var(--v-4); }
+    .hero__label { margin-bottom: var(--v-3); }
+    .hero__cta { margin-top: var(--v-5); gap: var(--v-2) var(--v-3); }
+    .hero__ghost { font-size: .95rem; }
+  }
+
+  /* ---- преимущества: четыре строки и поворот --------------------------------- */
+  .poka__head { max-width: 58rem; margin-bottom: var(--v-7); }
+  .poka__head .v-body { margin-top: var(--v-4); }
+  .poka__rows li { display: grid; grid-template-columns: minmax(14rem, .8fr) 1.6fr; gap: var(--v-2) var(--v-8); padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); align-items: start; }
+  .poka__rows li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .poka__rows h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-xl); line-height: 1.12; letter-spacing: 0; text-wrap: balance; }
+  .poka__rows p { color: var(--v-ink-soft); max-width: 58ch; text-wrap: pretty; }
+  .turn { margin-top: var(--v-7); display: grid; grid-template-columns: minmax(14rem, .8fr) 1.6fr; gap: var(--v-2) var(--v-8); align-items: start;
+    padding: var(--v-6); border-radius: var(--v-radius); background: var(--v-surface); box-shadow: var(--v-e1), var(--v-edge); }
+  .turn .v-label { color: var(--v-accent); padding-top: .4em; }
+  .turn__text { font-family: var(--v-font-display); font-size: var(--v-t-xl); line-height: 1.25; letter-spacing: 0; text-wrap: pretty; max-width: 32ch; }
+  @media (max-width: 860px) {
+    .poka__rows li, .turn { grid-template-columns: 1fr; gap: var(--v-2); }
+    .poka__rows h3 { font-size: var(--v-t-lg); }
+    .turn { padding: var(--v-5); }
+    .turn__text { font-size: var(--v-t-lg); }
+  }
+
+  /* ---- каталог: фильтр по категориям и карточки -------------------------------- */
+  .cat__head { max-width: 58rem; margin-bottom: var(--v-6); }
+  .cat__head .v-body { margin-top: var(--v-4); color: var(--v-ink-soft); }
+  .cat__filters { display: flex; flex-wrap: wrap; gap: var(--v-2); margin-bottom: var(--v-6); }
+  .cat__fbtn { appearance: none; padding: .5em 1.15em; border-radius: 999px; border: 1px solid var(--v-hair-strong); background: transparent;
+    color: var(--v-ink); font-family: var(--v-font-text); font-size: var(--v-t-sm); font-weight: 500; cursor: pointer; min-height: 44px; }
+  .cat__fbtn:hover { border-color: var(--v-accent); color: var(--v-accent); }
+  .cat__fbtn.is-on { background: var(--v-accent); border-color: var(--v-accent); color: var(--v-accent-ink); }
+  .cat__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--v-5); }
+  .cat__card { background: var(--v-surface); border-radius: var(--v-radius); box-shadow: var(--v-e1), var(--v-edge); overflow: hidden; display: flex; flex-direction: column; }
+  .cat__card[hidden] { display: none; }
+  .cat__card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 72%; display: block; }
+  .cat__body { padding: var(--v-4) var(--v-4) var(--v-5); display: flex; flex-direction: column; gap: var(--v-2); flex: 1; }
+  .cat__kind { font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-accent); font-weight: 500; }
+  .cat__name { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-lg); line-height: 1.15; letter-spacing: 0; }
+  .cat__taste { font-size: var(--v-t-sm); color: var(--v-ink-soft); flex: 1; text-wrap: pretty; }
+  .cat__row { display: flex; justify-content: space-between; align-items: end; gap: var(--v-3); margin-top: var(--v-2); }
+  .cat__price { font-family: var(--v-font-display); font-size: var(--v-t-lg); line-height: 1.1; color: var(--v-accent); white-space: nowrap; }
+  .cat__price small { display: block; font-family: var(--v-font-text); font-weight: 500; font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); margin-top: .3em; }
+  .cat__order { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 0 1.1em; border-radius: 999px;
+    background: var(--v-accent); color: var(--v-accent-ink); text-decoration: none; font-size: .9rem; font-weight: 600; white-space: nowrap; }
+  .cat__order:hover { filter: brightness(1.08); }
+  .cat__note { margin-top: var(--v-6); font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 58ch; }
+  .cat__note b { color: var(--v-ink); font-weight: 500; }
+  @media (max-width: 1100px) { .cat__grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 860px) {
+    .cat__grid { grid-template-columns: repeat(2, 1fr); gap: var(--v-3); }
+    .cat__name { font-size: 1.05rem; }
+    .cat__row { flex-direction: column; align-items: stretch; }
+    .cat__order { width: 100%; }
+    .cat__price { white-space: normal; }
+  }
+
+  /* ---- фирменный ход 1: подарочный набор собирается веером --------------------- */
+  .sb { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr auto; column-gap: var(--v-8); height: 100%;
+    padding: clamp(4.5rem, 12vh, 7rem) var(--v-gutter) clamp(2.5rem, 8vh, 5rem); }
+  .sb__head { grid-column: 1; max-width: 34rem; }
+  .sb__head .v-label { display: block; margin-bottom: var(--v-3); color: var(--v-accent); }
+  .sb__rep { grid-column: 1; grid-row: 2; position: relative; align-self: center; min-height: 12rem; }
+  .sb__rep > div { position: absolute; left: 0; top: 0; max-width: 32rem; }
+  .sb__step { display: inline-flex; align-items: center; gap: .55em; font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); font-weight: 500; margin-bottom: var(--v-3); }
+  .sb__step i { width: .6em; height: .6em; border-radius: 50%; background: var(--v-accent); }
+  .sb__rep h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-2xl); line-height: 1.05; letter-spacing: 0; text-wrap: balance; margin-bottom: var(--v-3); }
+  .sb__rep p { color: var(--v-ink-soft); max-width: 44ch; text-wrap: pretty; }
+  .sb__rep p b { color: var(--v-ink); font-weight: 500; }
+  .sb__after { grid-column: 1; grid-row: 3; display: flex; align-items: center; gap: var(--v-5); flex-wrap: wrap; }
+  .sb__hint { font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 34ch; }
+  .fan { grid-column: 2; grid-row: 1 / -1; position: relative; align-self: center; justify-self: center; width: min(100%, 66vh); aspect-ratio: 1 / 1; }
+  /* карточка: угол a0 в стопке → a1 в веере, сдвиг tx – чтобы лист задних карточек не прятался за передней;
+     k – доля раскрытия своей карточки; w – выход готового набора. Ось вращения далеко под карточкой (250 %): веер идёт дугой */
+  .fan__card { --k: clamp(0, calc((var(--v-p, 0) - var(--s)) / .3), 1); --w: clamp(0, calc((var(--v-p, 0) - .58) / .24), 1);
+    position: absolute; left: 27%; bottom: 6%; width: 46%; aspect-ratio: 3 / 4; transform-origin: 50% 250%; /* left = (100 − 46) / 2: у figure margin обнулён движком, центрируем через left */
+    border-radius: var(--v-radius); overflow: hidden; background: var(--v-surface); box-shadow: 0 24px 48px rgb(74 44 40 / .18), var(--v-edge);
+    transform: translateX(calc(var(--k) * var(--tx))) rotate(calc(var(--a0) * (1 - var(--k)) + var(--a1) * var(--k))) translateY(calc(var(--k) * -6% + var(--w) * 5%));
+    opacity: calc(1 - .6 * var(--w)); will-change: transform, opacity; }
+  .fan__card img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 70%; display: block; }
+  .fan__card figcaption { position: absolute; left: var(--v-4); right: var(--v-4); bottom: var(--v-4); font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink);
+    opacity: calc(var(--k) * (1 - var(--w))); text-shadow: 0 1px 8px rgb(255 250 248 / .9), 0 0 2px rgb(255 250 248 / .9); }
+  .fan__card--1 { --s: .04; --a0: 0deg; --a1: -8deg; --tx: -30%; z-index: 3; }
+  .fan__card--2 { --s: .14; --a0: 1deg; --a1: 0deg; --tx: 0%; z-index: 2; }
+  .fan__card--3 { --s: .24; --a0: -1deg; --a1: 8deg; --tx: 30%; z-index: 1; }
+  .fan__card--wrap { --k: 1; z-index: 4; transform-origin: 50% 50%; transform: translateY(calc((1 - var(--w)) * 14%)) scale(calc(.92 + .08 * var(--w))); opacity: var(--w); }
+  .fan__card--wrap figcaption { opacity: var(--w); }
+  .fan__legend { position: absolute; left: 0; right: 0; bottom: -1.6rem; text-align: center; font-size: var(--v-t-xs); color: var(--v-ink-soft); letter-spacing: var(--v-track-wide); text-transform: uppercase; }
+  @media (max-width: 1100px) { .sb { column-gap: var(--v-6); } .sb__rep h3 { font-size: var(--v-t-xl); } }
+  @media (max-width: 860px) {
+    .sb { grid-template-columns: 1fr; grid-template-rows: auto auto 1fr auto; row-gap: var(--v-3); padding: clamp(4.5rem, 11vh, 6rem) var(--v-gutter) clamp(1.5rem, 5vh, 3rem); }
+    .sb__head { max-width: none; }
+    .sb__head .v-label { display: none; }
+    .sb__head .v-display { font-size: var(--v-t-xl); }
+    .fan { grid-column: 1; grid-row: 2; width: min(100%, 40vh); aspect-ratio: 4 / 3; align-self: start; }
+    .fan__card { bottom: 0; }
+    .fan__card--1 { --a1: -6deg; --tx: -24%; } .fan__card--3 { --a1: 6deg; --tx: 24%; }
+    .fan__card figcaption { display: none; }
+    .fan__legend { display: none; }
+    .sb__rep { grid-row: 3; align-self: start; min-height: 9rem; }
+    .sb__rep h3 { font-size: var(--v-t-lg); margin-bottom: var(--v-2); }
+    .sb__rep p { font-size: var(--v-t-sm); }
+    .sb__after { grid-row: 4; }
+    .sb__hint { display: none; }
+  }
+  @media (max-width: 600px) and (max-height: 760px) { .fan { width: min(100%, 34vh); } .sb__after { display: none; } }
+
+  /* ---- о чае: фото со шторкой и четыре вида ------------------------------------ */
+  .ev { display: grid; grid-template-columns: .9fr 1.1fr; gap: var(--v-9); align-items: center; }
+  .ev__fig { position: relative; border-radius: var(--v-radius); overflow: hidden; aspect-ratio: 3 / 4; box-shadow: var(--v-e2), var(--v-edge); }
+  .ev__fig img { width: 100%; height: 100%; object-fit: cover; }
+  .ev__fig figcaption { position: absolute; left: var(--v-5); right: var(--v-5); bottom: var(--v-5); z-index: 1; font-size: var(--v-t-sm); color: var(--v-ink); max-width: 30ch; }
+  .ev__fig::after { content: ""; position: absolute; inset: auto 0 0 0; height: 45%; background: linear-gradient(to top, rgb(248 241 237 / .85), rgb(248 241 237 / .3) 55%, transparent); pointer-events: none; }
+  .ev__facts li { padding: var(--v-4) 0; border-top: 1px solid var(--v-hair); display: grid; gap: var(--v-1); }
+  .ev__facts li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .ev__facts strong { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-lg); letter-spacing: 0; line-height: 1.15; }
+  .ev__facts span { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 50ch; }
+  .ev .v-stack .v-display { margin-bottom: var(--v-2); }
+  .ev__hint { font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 50ch; }
+  .ev__hint b { color: var(--v-ink); font-weight: 500; }
+  @media (max-width: 860px) { .ev { grid-template-columns: 1fr; gap: var(--v-6); } .ev__fig { aspect-ratio: 4 / 3; } .ev__fig img { object-position: 50% 60%; } }
+
+  /* ---- фирменный ход 2: часы заказа ------------------------------------------- */
+  .kc__img { overflow: hidden; }
+  .kc__img img { width: 112%; height: 112%; left: -6%; top: -6%; object-fit: cover; object-position: 60% 50%; }
+  .kc__scrim { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: radial-gradient(115% 90% at 0% 0%, rgb(248 241 237 / .94) 0%, rgb(248 241 237 / .66) 40%, transparent 72%); }
+  .kc { position: absolute; inset: 0; z-index: 3; display: grid; grid-template-columns: 1.1fr .9fr; column-gap: var(--v-8); align-items: center;
+    padding: clamp(4.5rem, 12vh, 7rem) var(--v-gutter) clamp(2.5rem, 8vh, 5rem); }
+  .kc__copy { max-width: 36rem; }
+  .kc__copy .v-label { display: block; margin-bottom: var(--v-3); color: var(--v-accent); }
+  .kc__copy .v-display--lg { font-size: clamp(2rem, 1.3rem + 2.6vw, 3.6rem); margin-bottom: var(--v-6); }
+  .kc__rep { position: relative; min-height: 11rem; }
+  .kc__rep > div { position: absolute; left: 0; top: 0; max-width: 32rem; }
+  .kc__rep h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-xl); line-height: 1.12; letter-spacing: 0; margin-bottom: var(--v-3); text-wrap: balance; }
+  .kc__rep p { color: var(--v-ink); opacity: .9; max-width: 42ch; text-wrap: pretty; }
+  .clock { position: relative; justify-self: start; align-self: center; margin: -20vh 0 0 -15.5vw; width: min(100%, 33vh, 300px); aspect-ratio: 1 / 1; border-radius: 50%;
+    background: rgb(248 241 237 / .55); box-shadow: inset 0 0 0 2px var(--v-hair-strong), var(--v-e2); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  .clock__tick { position: absolute; left: 50%; top: 4%; width: 2px; height: 5%; margin-left: -1px; background: var(--v-hair-strong); transform-origin: 50% 920%; transform: rotate(var(--deg)); }
+  .clock__tick--big { background: var(--v-ink); height: 7%; transform-origin: 50% 657%; }
+  .clock__mark { position: absolute; inset: 0; transform: rotate(var(--deg)); pointer-events: none; }
+  .clock__mark i { position: absolute; left: 50%; top: 7.5%; width: .9rem; height: .9rem; margin-left: -.45rem; border-radius: 50%;
+    background: var(--v-accent); box-shadow: 0 0 0 0 rgb(47 107 77 / .45); transform: scale(calc(.55 + .45 * var(--on))); opacity: calc(.4 + .6 * var(--on)); }
+  .clock__mark b { position: absolute; left: 50%; top: -2.4rem; padding: .05rem .45rem; border-radius: 1rem; background: rgb(248 241 237 / .88); transform: translateX(-50%) rotate(calc(-1 * var(--deg))); font-family: var(--v-font-text); font-weight: 500; font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; white-space: nowrap;
+    color: var(--v-ink); opacity: calc(.55 + .45 * var(--on)); }
+  .clock__mark--photo { --deg: 60deg; --on: clamp(0, calc((var(--v-p, 0) - .6) * 14), 1); }
+  .clock__mark--door { --deg: 90deg; --on: clamp(0, calc((var(--v-p, 0) - .92) * 14), 1); }
+  .clock__hand { position: absolute; left: 50%; bottom: 50%; transform-origin: 50% 100%; border-radius: 999px; }
+  .clock__hand--h { width: 5px; height: 30%; margin-left: -2.5px; background: var(--v-ink); transform: rotate(calc(var(--v-p, 0) * 90deg)); }
+  .clock__hand--m { width: 3px; height: 42%; margin-left: -1.5px; background: var(--v-accent); transform: rotate(calc(var(--v-p, 0) * 1080deg)); }
+  .clock__pin { position: absolute; left: 50%; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: var(--v-ink); box-shadow: 0 0 0 3px var(--v-canvas); }
+  .clock__num { position: absolute; font-family: var(--v-font-display); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .clock__num--12 { left: 50%; top: 15%; transform: translateX(-50%); }
+  .clock__num--3 { right: 15%; top: 50%; transform: translateY(-50%); }
+  .clock__num--6 { left: 50%; bottom: 15%; transform: translateX(-50%); }
+  .clock__num--9 { left: 15%; top: 50%; transform: translateY(-50%); }
+  .kc__legend { position: absolute; left: 0; right: 0; bottom: auto; top: -3.4rem; text-align: center; white-space: normal; text-wrap: balance; line-height: 1.5; font-size: var(--v-t-xs); color: var(--v-ink-soft); letter-spacing: var(--v-track-wide); text-transform: uppercase; }
+  @media (max-width: 1100px) and (min-width: 861px) { .clock { margin-left: 0; } }
+  @media (max-width: 860px) {
+    .kc__scrim { background: linear-gradient(to bottom, rgb(248 241 237 / .96) 0%, rgb(248 241 237 / .86) 46%, rgb(248 241 237 / .3) 78%, transparent 100%); }
+    .kc { grid-template-columns: 1fr; grid-template-rows: auto 1fr; /* текст сверху, часы внизу */ row-gap: var(--v-4); align-items: start; padding: clamp(4.5rem, 11vh, 6rem) var(--v-gutter) clamp(1.5rem, 5vh, 3rem); }
+    .kc__copy { max-width: none; grid-row: 1; }
+    .kc__copy .v-label { display: none; }
+    .kc__copy .v-display--lg { font-size: var(--v-t-xl); margin-bottom: var(--v-4); }
+    .kc__rep { min-height: 9rem; }
+    .kc__rep h3 { font-size: var(--v-t-lg); margin-bottom: var(--v-2); }
+    .kc__rep p { font-size: var(--v-t-sm); }
+    .clock { grid-row: 2; width: min(54vw, 30vh); justify-self: center; align-self: end; margin: 0 14vw 3vh 0; }
+    .clock__mark i { top: -.45rem; } /* точка на ободе, чтобы не упиралась в цифру 3 */
+    .clock__mark b { top: -2.1rem; font-size: .95rem; }
+    .kc__legend { display: none; }
+    .clock__num { font-size: .95rem; }
+  }
+  @media (max-width: 600px) and (max-height: 700px) { .clock { width: min(46vw, 26vh); } }
+
+  /* ---- финал: контакты и одно сообщение ---------------------------------------- */
+  .close { min-height: 86svh; display: grid; grid-template-rows: 1fr auto; padding: clamp(6rem, 14vh, 9rem) var(--v-gutter) 2.5rem;
+    background: radial-gradient(60rem 40rem at calc(var(--v-mx, .5) * 100%) calc(var(--v-my, .5) * 100%), rgb(47 107 77 / .10), transparent 60%); }
+  .close__inner { align-self: center; display: grid; grid-template-columns: 1.25fr .75fr; gap: var(--v-9); align-items: start; padding-bottom: var(--v-9); }
+  .close__inner .v-display { margin-bottom: var(--v-5); }
+  .close__inner .v-lede { max-width: 40ch; }
+  .close__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-6); margin-top: var(--v-6); }
+  .close__tel { font-family: var(--v-font-display); font-size: var(--v-t-xl); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; color: var(--v-ink); letter-spacing: .01em; }
+  .close__hint { margin-top: var(--v-4); font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 44ch; }
+  .close__meta { display: grid; gap: var(--v-3); color: var(--v-ink-soft); padding-top: var(--v-2); }
+  .close__meta b { color: var(--v-ink); font-weight: 500; display: block; font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; margin-bottom: .2em; }
+  .foot { display: flex; justify-content: space-between; gap: var(--v-4); padding: var(--v-6) 0 0; border-top: 1px solid var(--v-hair); font-size: var(--v-t-xs); color: var(--v-ink-soft); flex-wrap: wrap; }
+  @media (max-width: 860px) {
+    .close { min-height: 0; padding: clamp(5rem, 12vh, 7rem) var(--v-gutter) calc(2.5rem + env(safe-area-inset-bottom)); }
+    .close__inner { grid-template-columns: 1fr; gap: var(--v-7); padding-bottom: var(--v-8); }
+    .close__tel { font-size: var(--v-t-lg); }
+    .foot__more { display: none; }
+  }
+  /* телефон: текст не мельче 15 px (--v-t-sm на 390 px = 14 px); блок в конце, чтобы не перебивался правилами компонентов */
+  @media (max-width: 860px) {
+    .poka__rows p, .sb__rep p, .sb__hint, .cat__taste, .cat__note, .cat__fbtn, .kc__rep p, .ev__facts span, .ev__hint, .ev__fig figcaption,
+    .close__hint, .close__meta, .foot, .hero__ghost { font-size: .95rem; }
+    .bar .v-btn { font-size: .95rem; }
+    .v-label, .sb__step, .close__meta b, .cat__kind, .cat__price small { font-size: .95rem; }
+  }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+  <div class="v-grain" aria-hidden="true"></div>
+
+  <header class="bar">
+    <a class="bar__mark" href="#top"><span class="seal seal--sm" aria-hidden="true"></span>Чайный дом</a>
+    <nav class="bar__nav" aria-label="Разделы сайта">
+      <a href="#katalog">Каталог</a>
+      <a href="#nabory">Наборы</a>
+      <a href="#ochae">О чае</a>
+      <a href="#kak">Как заказать</a>
+      <a href="#kontakty">Контакты</a>
+    </nav>
+    <nav class="bar__right" aria-label="Быстрые ссылки">
+      <a class="bar__tel" href="tel:{{телефон}}">{{телефон}}</a>
+      <a class="v-btn" href="{{ссылка-записи}}" rel="noopener">Заказать</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 1 · ПЕРВЫЙ ЭКРАН: шторка «чайный лист → чайная сцена» (вариант Б) -->
+    <section id="top" data-v-act="pin" data-v-span="2.2" data-v-drift="#f8f1ed" aria-label="Китайский чай с доставкой по Алматы">
+      <div data-v-stage>
+        <div class="v-layer hero__base">
+          <img src="assets/puer.webp" alt="" width="900" height="1200" fetchpriority="high">
+        </div>
+        <figure class="hero__reveal" data-v-reveal="up" data-v-reveal-at="0 0.45">
+          <picture>
+            <source media="(max-width: 860px)" srcset="assets/hero-m.webp">
+            <img src="assets/hero.webp" alt="" width="1920" height="1080" fetchpriority="high">
+          </picture>
+        </figure>
+        <div class="hero__scrim" aria-hidden="true"></div>
+        <div class="hero__floor" aria-hidden="true"></div>
+
+        <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 1 0 0" data-v-rise="0">
+          <span class="v-label hero__label"><span class="seal" aria-hidden="true"></span>Магазин китайского чая · Алматы</span>
+          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Китайский чай с доставкой по Алматы</h1>
+          <p class="v-lede">Около 50 сортов: пуэры, улуны, белый и зелёный чай, смеси и подарочные наборы. Поможем выбрать под вкус, заказ в один клик через мессенджер.</p>
+          <div class="hero__cta">
+            <a class="hero__ghost" href="#katalog">Смотреть чай</a>
+            <a class="v-btn" href="{{ссылка-записи}}" rel="noopener">Заказать</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · ПРЕИМУЩЕСТВА -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f2e7e2" id="plusy" aria-label="Почему Чайный дом">
+      <div class="v-wrap">
+        <div class="poka__head" data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--lg">Почему «Чайный дом»</h2>
+          <p class="v-body v-soft">Мы не супермаркетная полка с пакетиками, а магазин, где чай выбирают, пробуют и рассказывают про него простыми словами.</p>
+        </div>
+        <ul class="poka__rows" data-v-in data-v-stagger="90">
+          <li><h3>Прямые поставки из Китая</h3><p>Возим чай напрямую из Китая, без длинной цепочки посредников: в наличии свежий урожай и честная цена без наценок перекупщиков.</p></li>
+          <li><h3>Доставка по Алматы</h3><p>Привозим заказ по городу. Стоимость и время доставки называем сразу в чате, до оплаты, а не «посчитаем потом».</p></li>
+          <li><h3>Помощь с выбором</h3><p>Не разбираетесь в сортах – напишите, что любите: крепкий, лёгкий, цветочный, с кофеином или без. Подберём два-три варианта и объясним разницу.</p></li>
+          <li><h3>Подарочная упаковка</h3><p>Соберём набор под повод и упакуем так, что не стыдно вручить. Открытка с вашим текстом – внутрь, слово в слово.</p></li>
+        </ul>
+        <div class="turn" data-v-in data-v-in-self>
+          <span class="v-label">Совет</span>
+          <p class="turn__text">Чай лучше выбирать не по картинке, а по вкусу. Опишите, что пьёте сейчас, – предложим, что попробовать следующим.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · КАТАЛОГ: фильтр по категориям, карточки с ценой и кнопкой -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#f8f1ed" id="katalog" aria-label="Каталог чая">
+      <div class="v-wrap">
+        <div class="cat__head" data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--lg">Каталог</h2>
+          <p class="v-body">Пуэры, улуны, белый и зелёный чай, смеси и подарочные наборы. У каждой позиции – описание вкуса, фасовка и цена. Кнопка «Заказать» откроет мессенджер с уже набранным названием чая.</p>
+        </div>
+        <div class="cat__filters" role="group" aria-label="Фильтр по категориям" data-v-in data-v-in-self>
+          <button class="cat__fbtn is-on" type="button" data-f="all">Все</button>
+          <button class="cat__fbtn" type="button" data-f="puer">Пуэры</button>
+          <button class="cat__fbtn" type="button" data-f="oolong">Улуны</button>
+          <button class="cat__fbtn" type="button" data-f="gw">Зелёный и белый</button>
+          <button class="cat__fbtn" type="button" data-f="blend">Смеси</button>
+          <button class="cat__fbtn" type="button" data-f="set">Наборы</button>
+        </div>
+        <div class="cat__grid" data-v-in data-v-stagger="60">
+          <article class="cat__card" data-cat="puer">
+            <img src="assets/puer.webp" alt="Прессованный блин шу пуэра на керамической тарелке" width="900" height="1200" loading="lazy" decoding="async">
+            <div class="cat__body">
+              <span class="cat__kind">Пуэр</span>
+              <h3 class="cat__name">Шу пуэр «Гун Тин»</h3>
+              <p class="cat__taste">Плотный настой с нотами ореха и сухофруктов, мягкая сладость в послевкусии.</p>
+              <div class="cat__row"><span class="cat__price v-nums">{{цена}} ₸<small>100 г</small></span><a class="cat__order" href="{{ссылка-записи}}" rel="noopener">Заказать</a></div>
+            </div>
+          </article>
+          <article class="cat__card" data-cat="puer">
+            <img src="assets/puer.webp" alt="Прессованный блин шэн пуэра" width="900" height="1200" loading="lazy" decoding="async">
+            <div class="cat__body">
+              <span class="cat__kind">Пуэр</span>
+              <h3 class="cat__name">Шэн пуэр «Биндао»</h3>
+              <p class="cat__taste">Свежий, с цветочной горчинкой и долгим сладким послевкусием.</p>
+              <div class="cat__row"><span class="cat__price v-nums">{{цена}} ₸<small>100 г</small></span><a class="cat__order" href="{{ссылка-записи}}" rel="noopener">Заказать</a></div>
+            </div>
+          </article>
+          <article class="cat__card" data-cat="puer">
+            <img src="assets/puer.webp" alt="Шу пуэр в кожуре мандарина" width="900" height="1200" loading="lazy" decoding="async">
+            <div class="cat__body">
+              <span class="cat__kind">Пуэр</span>
+              <h3 class="cat__name">Шу пуэр в мандарине</h3>
+              <p class="cat__taste">Сяо цин гань: пуэр, настоянный в кожуре зелёного мандарина, с цитрусовой свежестью.</p>
+              <div class="cat__row"><span class="cat__price v-nums">{{цена}} ₸<small>1 шт</small></span><a class="cat__order" href="{{ссылка-записи}}" rel="noopener">Заказать</a></div>
+            </div>
+          </article>
+          <article class="cat__card" data-cat="oolong">
+            <img src="assets/oolong.webp" alt="Скрученные листья улуна Те Гуань Инь в керамической пиале" width="900" height="1200" loading="lazy" decoding="async">
+            <div class="cat__body">
+              <span class="cat__kind">Улун</span>
+              <h3 class="cat__name">Те Гуань Инь</h3>
+              <p class="cat__taste">Светлый улун с цветочным ароматом и сливочным послевкусием.</p>
+              <div class="cat__row"><span class="cat__price v-nums">{{цена}} ₸<small>100 г</small></span><a class="cat__order" href="{{ссылка-записи}}" rel="noopener">Заказать</a></div>
+            </div>
+          </article>
+          <article class="cat__card" data-cat="oolong">
+            <img src="assets/oolong.webp" alt="Тёмный улун Да Хун Пао" width="900" height="1200" loading="lazy" decoding="async">
+            <div class="cat__body">
+              <span class="cat__kind">Улун</span>
+              <h3 class="cat__name">Да Хун Пао</h3>
+              <p class="cat__taste">Тёмный прожаренный улун: минеральный, с нотами какао и карамели.</p>
+              <div class="cat__row"><span class="cat__price v-nums">{{цена}} ₸<small>50 г</small></span><a class="cat__order" href="{{ссылка-записи}}" rel="noopener">Заказать</a></div>
+            </div>
+          </article>
+          <article class="cat__card" data-cat="oolong">
+            <img src="assets/oolong.webp" alt="Молочный улун" width="900" height="1200" loading="lazy" decoding="async">
+            <div class="cat__body">
+              <span class="cat__kind">Улун</span>
+              <h3 class="cat__name">Молочный улун</h3>
+              <p class="cat__taste">Мягкий, с естественным сливочно-карамельным ароматом. Хорош тем, кто пробует улун впервые.</p>
+              <div class="cat__row"><span class="cat__price v-nums">{{цена}} ₸<small>100 г</small></span><a class="cat__order" href="{{ссылка-записи}}" rel="noopener">Заказать</a></div>
+            </div>
+          </article>
+          <article class="cat__card" data-cat="gw">
+            <img src="assets/green.webp" alt="Плоские листья зелёного чая Лун Цзин" width="900" height="1200" loading="lazy" decoding="async">
+            <div class="cat__body">
+              <span class="cat__kind">Зелёный</span>
+              <h3 class="cat__name">Лун Цзин</h3>
+              <p class="cat__taste">Знаменитый зелёный чай с плоским листом: свежий, с нотами молодой травы и ореха.</p>
+              <div class="cat__row"><span class="cat__price v-nums">{{цена}} ₸<small>50 г</small></span><a class="cat__order" href="{{ссылка-записи}}" rel="noopener">Заказать</a></div>
+            </div>
+          </article>
+          <article class="cat__card" data-cat="gw">
+            <img src="assets/white.webp" alt="Листья белого чая Бай Му Дань" width="900" height="1200" loading="lazy" decoding="async">
+            <div class="cat__body">
+              <span class="cat__kind">Белый</span>
+              <h3 class="cat__name">Бай Му Дань</h3>
+              <p class="cat__taste">Белый пион: мягкий, с медовой сладостью и ароматом сухоцвета.</p>
+              <div class="cat__row"><span class="cat__price v-nums">{{цена}} ₸<small>50 г</small></span><a class="cat__order" href="{{ссылка-записи}}" rel="noopener">Заказать</a></div>
+            </div>
+          </article>
+          <article class="cat__card" data-cat="gw">
+            <img src="assets/white.webp" alt="Почки белого чая Байха Иньчжэнь" width="900" height="1200" loading="lazy" decoding="async">
+            <div class="cat__body">
+              <span class="cat__kind">Белый</span>
+              <h3 class="cat__name">Байха Иньчжэнь</h3>
+              <p class="cat__taste">Серебряные иглы: только почки. Лёгкий, с ароматом меда и полевых цветов.</p>
+              <div class="cat__row"><span class="cat__price v-nums">{{цена}} ₸<small>50 г</small></span><a class="cat__order" href="{{ссылка-записи}}" rel="noopener">Заказать</a></div>
+            </div>
+          </article>
+          <article class="cat__card" data-cat="blend">
+            <img src="assets/blend.webp" alt="Зелёный чай с жасмином" width="900" height="1200" loading="lazy" decoding="async">
+            <div class="cat__body">
+              <span class="cat__kind">Смесь</span>
+              <h3 class="cat__name">Зелёный с жасмином</h3>
+              <p class="cat__taste">Классика: зелёный чай, настоянный на жасминовых цветах. Ароматный и мягкий.</p>
+              <div class="cat__row"><span class="cat__price v-nums">{{цена}} ₸<small>100 г</small></span><a class="cat__order" href="{{ссылка-записи}}" rel="noopener">Заказать</a></div>
+            </div>
+          </article>
+          <article class="cat__card" data-cat="blend">
+            <img src="assets/blend.webp" alt="Улун с османтусом" width="900" height="1200" loading="lazy" decoding="async">
+            <div class="cat__body">
+              <span class="cat__kind">Смесь</span>
+              <h3 class="cat__name">Улун с османтусом</h3>
+              <p class="cat__taste">Цветочный улун с медовым ароматом османтуса. Пьётся как десерт, без сахара.</p>
+              <div class="cat__row"><span class="cat__price v-nums">{{цена}} ₸<small>100 г</small></span><a class="cat__order" href="{{ссылка-записи}}" rel="noopener">Заказать</a></div>
+            </div>
+          </article>
+          <article class="cat__card" data-cat="set">
+            <img src="assets/set.webp" alt="Подарочный набор «Знакомство с пуэром» в крафтовой коробке" width="900" height="1200" loading="lazy" decoding="async">
+            <div class="cat__body">
+              <span class="cat__kind">Набор</span>
+              <h3 class="cat__name">«Знакомство с пуэром»</h3>
+              <p class="cat__taste">Три вида пуэра в дегустационной фасовке и памятка по завариванию.</p>
+              <div class="cat__row"><span class="cat__price v-nums">{{цена}} ₸<small>набор</small></span><a class="cat__order" href="{{ссылка-записи}}" rel="noopener">Заказать</a></div>
+            </div>
+          </article>
+          <article class="cat__card" data-cat="set">
+            <img src="assets/set.webp" alt="Подарочный набор «Утро и вечер»" width="900" height="1200" loading="lazy" decoding="async">
+            <div class="cat__body">
+              <span class="cat__kind">Набор</span>
+              <h3 class="cat__name">«Утро и вечер»</h3>
+              <p class="cat__taste">Свежий зелёный на утро и мягкий шу пуэр на вечер, в крафтовой коробке с лентой.</p>
+              <div class="cat__row"><span class="cat__price v-nums">{{цена}} ₸<small>набор</small></span><a class="cat__order" href="{{ссылка-записи}}" rel="noopener">Заказать</a></div>
+            </div>
+          </article>
+          <article class="cat__card" data-cat="set">
+            <img src="assets/set.webp" alt="Подарочный набор с фарфоровой гайванью" width="900" height="1200" loading="lazy" decoding="async">
+            <div class="cat__body">
+              <span class="cat__kind">Набор</span>
+              <h3 class="cat__name">Набор с гайванью</h3>
+              <p class="cat__taste">Два вида чая и фарфоровая гайвань – подарок, с которого начинают путь в чай.</p>
+              <div class="cat__row"><span class="cat__price v-nums">{{цена}} ₸<small>набор</small></span><a class="cat__order" href="{{ссылка-записи}}" rel="noopener">Заказать</a></div>
+            </div>
+          </article>
+        </div>
+        <p class="cat__note" data-v-in data-v-in-self><b>Это часть ассортимента.</b> Полный список – около 50 позиций с актуальными ценами и наличием – пришлём в чат по запросу.</p>
+      </div>
+    </section>
+
+    <!-- 4 · ПОДАРОЧНЫЕ НАБОРЫ: набор собирается веером (фирменный ход 1) -->
+    <section data-v-act="pin" data-v-span="2.4" data-v-drift="#f2e7e2" id="nabory" aria-label="Подарочные наборы">
+      <div data-v-stage>
+        <div class="sb">
+          <div class="sb__head" data-v-cue="0 1 0 0" data-v-rise="0">
+            <span class="v-label">Подарочные наборы</span>
+            <h2 class="v-display v-display--md">Набор собирается под повод, а не наоборот</h2>
+          </div>
+
+          <div class="sb__rep">
+            <div data-v-cue="0 0.26 0 0.05">
+              <span class="sb__step"><i aria-hidden="true"></i>1 · Повод</span>
+              <h3>Скажите, для кого и по какому поводу</h3>
+              <p>День рождения, «спасибо», корпоративный подарок или «хочу познакомить с чаем». <b>От повода зависят состав и упаковка.</b></p>
+            </div>
+            <div data-v-cue="0.27 0.51 0.05 0.05">
+              <span class="sb__step"><i aria-hidden="true"></i>2 · Состав</span>
+              <h3>Два-четыре вида чая на выбор</h3>
+              <p>Соберём из любых позиций каталога, фасовка – от дегустационной до полной. <b>Состав и цену называем до подтверждения.</b></p>
+            </div>
+            <div data-v-cue="0.52 0.76 0.05 0.05">
+              <span class="sb__step"><i aria-hidden="true"></i>3 · Упаковка и открытка</span>
+              <h3>Крафт, лента и ваш текст</h3>
+              <p>Крафтовая коробка с лентой, внутри – открытка с вашим текстом. <b>Слово в слово, без наших правок.</b></p>
+            </div>
+            <div data-v-cue="0.77 1 0.05 0">
+              <span class="sb__step"><i aria-hidden="true"></i>4 · Фото перед отправкой</span>
+              <h3>Собранный набор уходит вам в чат</h3>
+              <p>Перед доставкой присылаем фото именно вашего набора. <b>Едет то, что на фото.</b></p>
+            </div>
+          </div>
+
+          <div class="fan" aria-hidden="true">
+            <figure class="fan__card fan__card--3"><img src="assets/white.webp" alt="" width="900" height="1200" loading="lazy" decoding="async"><figcaption>Белый · лёгкий</figcaption></figure>
+            <figure class="fan__card fan__card--2"><img src="assets/oolong.webp" alt="" width="900" height="1200" loading="lazy" decoding="async"><figcaption>Улун · ароматный</figcaption></figure>
+            <figure class="fan__card fan__card--1"><img src="assets/puer.webp" alt="" width="900" height="1200" loading="lazy" decoding="async"><figcaption>Пуэр · плотный</figcaption></figure>
+            <figure class="fan__card fan__card--wrap"><img src="assets/set.webp" alt="" width="900" height="1200" loading="lazy" decoding="async"><figcaption>Собрано · крафт, лента</figcaption></figure>
+            <p class="fan__legend">Состав на фото – пример: ваш набор соберём под ваш повод</p>
+          </div>
+
+          <div class="sb__after" data-v-cue="0.78 1 0.06 0">
+            <a class="v-btn" href="{{ссылка-записи}}" rel="noopener">Заказать</a>
+            <span class="sb__hint">Не знаете, что положить в набор – опишите человека и повод, предложим варианты с ценой</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · О ЧАЕ: четыре вида и коротко о магазине -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#fbf6f3" id="ochae" aria-label="О чае и магазине">
+      <div class="v-wrap ev">
+        <figure class="ev__fig" data-v-reveal="up" data-v-reveal-at="0.12 0.46" data-v-tilt="4">
+          <img src="assets/ceremony.webp" alt="Чайная сцена: гайвань, чахай с янтарным чаем и пиалы на бамбуковом подносе" width="1200" height="1600" loading="lazy" decoding="async">
+          <figcaption>Гайвань, чахай и пиалы – всё для заваривания подскажем при заказе</figcaption>
+        </figure>
+        <div class="v-stack" data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--md">О чае коротко</h2>
+          <ul class="ev__facts">
+            <li><strong>Пуэр</strong><span>Пресованный и рассыпной, шэн и шу. Плотный, выдержанный, с характером. Расскажем, чем отличаются и с какого начать.</span></li>
+            <li><strong>Улун</strong><span>От светлого Те Гуань Инь до тёмного Да Хун Пао. Ароматный, раскрывается за несколько проливов.</span></li>
+            <li><strong>Белый и зелёный</strong><span>Лёгкие и свежие: Бай Му Дань, серебряные иглы, Лун Цзин. Хороши тем, кто хочет мягкий вкус без горечи.</span></li>
+            <li><strong>Смеси</strong><span>Чай с жасмином, османтусом и цитрусом. Ароматный вариант для тех, кто пьёт чай «для настроения».</span></li>
+          </ul>
+          <p class="ev__hint"><b>Мы сами пьём то, что продаём,</b> – поэтому про каждую позицию расскажем простыми словами: как заваривать, сколько проливов держит и с чем его пьют.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · КАК ЗАКАЗАТЬ И ДОСТАВКА: три шага и часы (фирменный ход 2) -->
+    <section data-v-act="pin" data-v-span="2" data-v-drift="#f8f1ed" id="kak" aria-label="Как заказать и доставка">
+      <div data-v-stage>
+        <div class="v-layer kc__img" data-v-parallax="-0.4">
+          <img src="assets/delivery.webp" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+        </div>
+        <div class="kc__scrim" aria-hidden="true"></div>
+        <div class="kc">
+          <div class="kc__copy">
+            <div data-v-cue="0 1 0 0" data-v-rise="0">
+              <span class="v-label">Как заказать</span>
+              <h2 class="v-display v-display--lg">Три шага, и чай едет к вам</h2>
+            </div>
+            <div class="kc__rep">
+              <div data-v-cue="0 0.34 0 0.06">
+                <h3>Выбираете чай в каталоге</h3>
+                <p>Фильтр по категориям, у каждой позиции – описание вкуса, фасовка и цена. Не определились – напишите нам, подберём вместе.</p>
+              </div>
+              <div data-v-cue="0.36 0.66 0.06 0.06">
+                <h3>Нажимаете «Заказать»</h3>
+                <p>Откроется мессенджер с уже набранным названием чая – останется отправить сообщение. Подтвердим наличие, цену и время доставки.</p>
+              </div>
+              <div data-v-cue="0.68 1 0.06 0">
+                <h3>Получаете доставку по Алматы</h3>
+                <p>Привозим заказ по городу. Стоимость и интервал доставки назовём в чате до оплаты – без сюрпризов.</p>
+              </div>
+            </div>
+          </div>
+          <div class="clock" aria-hidden="true">
+            <i class="clock__tick clock__tick--big" style="--deg:0deg"></i><i class="clock__tick" style="--deg:30deg"></i><i class="clock__tick" style="--deg:60deg"></i>
+            <i class="clock__tick clock__tick--big" style="--deg:90deg"></i><i class="clock__tick" style="--deg:120deg"></i><i class="clock__tick" style="--deg:150deg"></i>
+            <i class="clock__tick clock__tick--big" style="--deg:180deg"></i><i class="clock__tick" style="--deg:210deg"></i><i class="clock__tick" style="--deg:240deg"></i>
+            <i class="clock__tick clock__tick--big" style="--deg:270deg"></i><i class="clock__tick" style="--deg:300deg"></i><i class="clock__tick" style="--deg:330deg"></i>
+            <span class="clock__num clock__num--12">12</span><span class="clock__num clock__num--3">3</span><span class="clock__num clock__num--6">6</span><span class="clock__num clock__num--9">9</span>
+            <span class="clock__mark clock__mark--photo"><i></i><b>заказ в чате</b></span>
+            <span class="clock__mark clock__mark--door"><i></i><b>доставка</b></span>
+            <i class="clock__hand clock__hand--h"></i>
+            <i class="clock__hand clock__hand--m"></i>
+            <i class="clock__pin"></i>
+            <p class="kc__legend">Стрелка идёт к вашему заказу, пока вы листаете</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · КОНТАКТЫ: одно сообщение -->
+    <section data-v-act="flow" data-v-drift="#fbf6f3" id="kontakty" aria-label="Контакты">
+      <div class="close" data-v-spotlight>
+        <div class="close__inner">
+          <div data-v-in data-v-stagger="80">
+            <h2 class="v-display v-display--lg">Напишите, что любите пить</h2>
+            <p class="v-lede">Ответим наличием, ценой и временем доставки. Не разбираетесь в чае – тем более пишите: подберём под вкус и объясним простыми словами.</p>
+            <div class="close__cta">
+              <a class="v-btn" href="{{ссылка-записи}}" rel="noopener" data-v-magnet="0.22" data-v-rise="0">Заказать</a>
+              <a class="close__tel" href="tel:{{телефон}}">{{телефон}}</a>
+            </div>
+            <p class="close__hint">Опишите вкус, который нравится, или повод для подарка – предложим два-три варианта с ценой. Не любите писать – звоните.</p>
+          </div>
+          <div class="close__meta" data-v-in data-v-stagger="60">
+            <span><b>Принимаем заказы</b>{{часы}}</span>
+            <span><b>Доставка</b>по Алматы · стоимость и интервал назовём в чате</span>
+            <span><b>Город</b>Алматы, Казахстан</span>
+          </div>
+        </div>
+        <footer class="foot">
+          <span>Чайный дом · Алматы</span>
+          <span data-slot-optional>{{юрлицо}} · ИНН {{ИНН}}</span>
+          <span class="foot__more">Китайский чай, смеси и подарочные наборы с доставкой по Алматы</span>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  // На телефоне пины короче: data-v-span из CSS не поменять, правим атрибут до монтирования.
+  if (window.matchMedia('(max-width: 860px)').matches) {
+    document.getElementById('top').setAttribute('data-v-span', '1.8');
+    document.getElementById('nabory').setAttribute('data-v-span', '2.2');
+    document.getElementById('kak').setAttribute('data-v-span', '1.8');
+  }
+  Vibe.mount(document.querySelector('.v-page'));
+
+  // Шапка: подложка после 40 px прокрутки, чтобы текст секций не просвечивал.
+  (function () {
+    var bar = document.querySelector('.bar'), on = null;
+    function tick() { var s = window.scrollY > 40; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); } }
+    window.addEventListener('scroll', tick, { passive: true }); tick();
+  })();
+
+  // Фильтр каталога по категориям.
+  (function () {
+    var btns = document.querySelectorAll('.cat__fbtn');
+    var cards = document.querySelectorAll('.cat__card');
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        btns.forEach(function (b) { b.classList.remove('is-on'); });
+        btn.classList.add('is-on');
+        var f = btn.getAttribute('data-f');
+        cards.forEach(function (card) {
+          card.hidden = f !== 'all' && card.getAttribute('data-cat') !== f;
+        });
+      });
+    });
+  })();
+  // Фирменные ходы (веер карточек в #nabory и часы в #kak) ведёт CSS от --v-p акта, скрипта им не нужно.
+</script>
+</body>
+</html>
